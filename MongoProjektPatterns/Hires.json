@@ -1,0 +1,15 @@
+{
+    "hireID": 1,
+    "clientID": 1,
+    "rentDate": {
+        "start": "YYYY-MM-DDThh:mm standardowy format czasu JS'a",
+        "end": "YYYY-MM-DDThh:mm"
+    },
+    "price": 100,
+    "carID": 1,
+    "fuel": {
+        "start": 10.21,
+        "end": 8.21
+    },
+    "status": "A/C/F"
+}

@@ -1,0 +1,18 @@
+{
+    "carID": 1,
+    "brand": "Polonez",
+    "model": "1.6 (/Polonez 1.6)",
+    "year": 2000,
+    "registraction": "KR 12345",
+    "pricePerDay": 1000000,
+    "category": "economy/basic/premium",
+    "availaibility": "A/R/S",
+    "descpription": "Kurła panie takiego poloneza to by każdy chciał",
+    "raitngs": {
+        "bad": 0,
+        "good": 0,
+        "excelent": 0
+    },
+    "deposit": 1000,
+    "photo": "link"
+}

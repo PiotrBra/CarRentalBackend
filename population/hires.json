@@ -1,0 +1,12 @@
+{"hireID": 0, "clientID": 8, "rentDate": {"start": "2024-04-02T23:13", "end": ""}, "price": 4985, "carID": 1, "fuel": {"start": 0.62, "end": 3.21}, "status": "A"}
+{"hireID": 1, "clientID": 30, "rentDate": {"start": "2024-04-24T07:25", "end": "2024-04-27T11:49"}, "price": 2646, "carID": 12, "fuel": {"start": 40.8, "end": 7.22}, "status": "F"}
+{"hireID": 2, "clientID": 4, "rentDate": {"start": "2024-04-16T02:35", "end": "2024-04-23T06:10"}, "price": 3909, "carID": 14, "fuel": {"start": 11.01, "end": 20.6}, "status": "F"}
+{"hireID": 3, "clientID": 12, "rentDate": {"start": "2024-04-04T01:44", "end": ""}, "price": 4643, "carID": 18, "fuel": {"start": 21.52, "end": 20.46}, "status": "A"}
+{"hireID": 4, "clientID": 18, "rentDate": {"start": "2024-04-22T00:13", "end": ""}, "price": 2180, "carID": 5, "fuel": {"start": 28.18, "end": 25.58}, "status": "A"}
+{"hireID": 5, "clientID": 6, "rentDate": {"start": "2024-04-11T08:21", "end": "2024-04-13T10:02"}, "price": 3976, "carID": 13, "fuel": {"start": 41.23, "end": 8.55}, "status": "F"}
+{"hireID": 6, "clientID": 14, "rentDate": {"start": "2024-04-02T12:14", "end": ""}, "price": 3795, "carID": 15, "fuel": {"start": 48.81, "end": 44.38}, "status": "A"}
+{"hireID": 7, "clientID": 16, "rentDate": {"start": "2024-04-03T06:33", "end": "2024-04-07T11:41"}, "price": 3827, "carID": 17, "fuel": {"start": 42.2, "end": 34.07}, "status": "F"}
+{"hireID": 8, "clientID": 50, "rentDate": {"start": "2024-04-25T12:29", "end": "2024-05-05T15:56"}, "price": 1721, "carID": 19, "fuel": {"start": 25.61, "end": 36.17}, "status": "F"}
+{"hireID": 9, "clientID": 1, "rentDate": {"start": "2024-04-10T10:19", "end": "2024-05-12T12:16"}, "price": 4916, "carID": 3, "fuel": {"start": 42.24, "end": 22.97}, "status": "F"}
+{"hireID": 10, "clientID": 41, "rentDate": {"start": "2024-04-04T00:45", "end": "2024-05-12T00:47"}, "price": 1394, "carID": 7, "fuel": {"start": 28.0, "end": 30.58}, "status": "F"}
+{"hireID": 11, "clientID": 11, "rentDate": {"start": "2024-04-09T02:46", "end": "2024-05-13T06:28"}, "price": 3891, "carID": 6, "fuel": {"start": 12.64, "end": 20.41}, "status": "F"}

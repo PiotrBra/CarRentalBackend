@@ -1,0 +1,100 @@
+{"reservationID": 0, "clientID": 28, "carID": 0, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2024-06-03T18:10", "end": "2024-08-13T13:00"}, "status": "A"}
+{"reservationID": 1, "clientID": 48, "carID": 0, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2024-10-13T20:25", "end": "2024-08-18T02:15"}, "status": "A"}
+{"reservationID": 2, "clientID": 47, "carID": 0, "additionalRequests": "system monitorowania martwego pola", "reservationDate": {"start": "2024-08-25T09:25", "end": "2024-09-24T00:28"}, "status": "C"}
+{"reservationID": 3, "clientID": 36, "carID": 0, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-10-08T21:54", "end": "2024-10-11T01:04"}, "status": "A"}
+{"reservationID": 4, "clientID": 23, "carID": 0, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-11-30T08:48", "end": "2024-11-15T07:32"}, "status": "A"}
+{"reservationID": 5, "clientID": 6, "carID": 1, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-07-05T15:39", "end": "2024-09-01T02:12"}, "status": "C"}
+{"reservationID": 6, "clientID": 48, "carID": 1, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-11-19T17:10", "end": "2024-09-15T22:24"}, "status": "A"}
+{"reservationID": 7, "clientID": 13, "carID": 1, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2024-10-25T05:21", "end": "2024-09-28T09:12"}, "status": "A"}
+{"reservationID": 8, "clientID": 36, "carID": 1, "additionalRequests": "GPS", "reservationDate": {"start": "2024-10-08T06:46", "end": "2024-11-02T13:29"}, "status": "A"}
+{"reservationID": 9, "clientID": 15, "carID": 1, "additionalRequests": "dodatkowe zabezpieczenia antykradzie\u017cowe", "reservationDate": {"start": "2024-12-21T14:19", "end": "2025-01-03T18:57"}, "status": "C"}
+{"reservationID": 10, "clientID": 25, "carID": 2, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-06-12T05:36", "end": "2024-06-01T02:21"}, "status": "A"}
+{"reservationID": 11, "clientID": 50, "carID": 2, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2024-08-18T10:00", "end": "2024-06-14T05:15"}, "status": "A"}
+{"reservationID": 12, "clientID": 16, "carID": 2, "additionalRequests": "dodatkowe zabezpieczenia antykradzie\u017cowe", "reservationDate": {"start": "2024-08-01T14:21", "end": "2024-06-14T22:38"}, "status": "A"}
+{"reservationID": 13, "clientID": 16, "carID": 2, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2024-07-04T10:46", "end": "2024-07-22T07:46"}, "status": "A"}
+{"reservationID": 14, "clientID": 30, "carID": 2, "additionalRequests": "dodatkowy kierowca", "reservationDate": {"start": "2024-07-27T06:03", "end": "2024-07-25T10:19"}, "status": "A"}
+{"reservationID": 15, "clientID": 16, "carID": 3, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-09-01T12:49", "end": "2024-09-30T01:44"}, "status": "A"}
+{"reservationID": 16, "clientID": 21, "carID": 3, "additionalRequests": "system automatycznego hamowania", "reservationDate": {"start": "2024-10-07T07:33", "end": "2024-11-10T09:45"}, "status": "A"}
+{"reservationID": 17, "clientID": 3, "carID": 3, "additionalRequests": "automatyczne \u015bwiat\u0142a dziene", "reservationDate": {"start": "2024-11-16T13:06", "end": "2024-12-13T09:09"}, "status": "A"}
+{"reservationID": 18, "clientID": 42, "carID": 3, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2025-02-20T00:38", "end": "2025-01-30T20:20"}, "status": "A"}
+{"reservationID": 19, "clientID": 35, "carID": 3, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2025-03-06T10:05", "end": "2025-04-01T13:19"}, "status": "A"}
+{"reservationID": 20, "clientID": 23, "carID": 4, "additionalRequests": "dodatkowy baga\u017cnik na dachu", "reservationDate": {"start": "2024-09-04T19:05", "end": "2024-08-13T09:40"}, "status": "A"}
+{"reservationID": 21, "clientID": 38, "carID": 4, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-09-25T15:10", "end": "2024-09-20T11:08"}, "status": "A"}
+{"reservationID": 22, "clientID": 28, "carID": 4, "additionalRequests": "", "reservationDate": {"start": "2024-09-27T20:31", "end": "2024-11-11T04:54"}, "status": "A"}
+{"reservationID": 23, "clientID": 20, "carID": 4, "additionalRequests": "", "reservationDate": {"start": "2024-12-01T00:22", "end": "2024-12-19T06:41"}, "status": "A"}
+{"reservationID": 24, "clientID": 17, "carID": 4, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2025-02-07T17:51", "end": "2025-02-26T14:14"}, "status": "A"}
+{"reservationID": 25, "clientID": 3, "carID": 5, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-08-02T19:56", "end": "2024-09-16T07:32"}, "status": "A"}
+{"reservationID": 26, "clientID": 49, "carID": 5, "additionalRequests": "system automatycznego hamowania", "reservationDate": {"start": "2024-11-22T03:51", "end": "2024-09-30T06:15"}, "status": "A"}
+{"reservationID": 27, "clientID": 2, "carID": 5, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-12-08T10:31", "end": "2024-12-01T11:31"}, "status": "A"}
+{"reservationID": 28, "clientID": 10, "carID": 5, "additionalRequests": "fotelik", "reservationDate": {"start": "2025-02-19T04:58", "end": "2025-02-22T04:24"}, "status": "A"}
+{"reservationID": 29, "clientID": 43, "carID": 5, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2025-04-06T23:35", "end": "2025-05-08T06:29"}, "status": "C"}
+{"reservationID": 30, "clientID": 25, "carID": 6, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-07-17T01:36", "end": "2024-08-24T08:16"}, "status": "C"}
+{"reservationID": 31, "clientID": 4, "carID": 6, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-10-01T17:39", "end": "2024-10-10T13:15"}, "status": "A"}
+{"reservationID": 32, "clientID": 12, "carID": 6, "additionalRequests": "dodatkowy kierowca", "reservationDate": {"start": "2024-11-12T17:00", "end": "2024-12-22T22:06"}, "status": "A"}
+{"reservationID": 33, "clientID": 49, "carID": 6, "additionalRequests": "fotelik", "reservationDate": {"start": "2025-03-05T15:46", "end": "2025-01-26T21:16"}, "status": "A"}
+{"reservationID": 34, "clientID": 48, "carID": 6, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2025-03-30T06:21", "end": "2025-02-15T09:47"}, "status": "A"}
+{"reservationID": 35, "clientID": 27, "carID": 7, "additionalRequests": "GPS", "reservationDate": {"start": "2024-10-01T03:08", "end": "2024-10-17T00:08"}, "status": "A"}
+{"reservationID": 36, "clientID": 6, "carID": 7, "additionalRequests": "automatyczne \u015bwiat\u0142a dziene", "reservationDate": {"start": "2025-01-01T19:16", "end": "2024-12-02T10:52"}, "status": "A"}
+{"reservationID": 37, "clientID": 10, "carID": 7, "additionalRequests": "GPS", "reservationDate": {"start": "2024-12-21T20:20", "end": "2025-01-16T01:52"}, "status": "A"}
+{"reservationID": 38, "clientID": 31, "carID": 7, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2025-02-19T01:34", "end": "2025-01-26T00:47"}, "status": "A"}
+{"reservationID": 39, "clientID": 14, "carID": 7, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2025-03-07T16:45", "end": "2025-04-06T21:34"}, "status": "A"}
+{"reservationID": 40, "clientID": 7, "carID": 8, "additionalRequests": "system monitorowania martwego pola", "reservationDate": {"start": "2024-07-25T14:44", "end": "2024-06-24T12:59"}, "status": "A"}
+{"reservationID": 41, "clientID": 46, "carID": 8, "additionalRequests": "system monitorowania martwego pola", "reservationDate": {"start": "2024-08-25T03:49", "end": "2024-07-13T19:02"}, "status": "C"}
+{"reservationID": 42, "clientID": 48, "carID": 8, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-07-25T19:41", "end": "2024-07-16T21:07"}, "status": "C"}
+{"reservationID": 43, "clientID": 47, "carID": 8, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2024-07-31T16:56", "end": "2024-10-06T06:31"}, "status": "A"}
+{"reservationID": 44, "clientID": 4, "carID": 8, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-10-08T11:33", "end": "2024-12-18T17:14"}, "status": "A"}
+{"reservationID": 45, "clientID": 4, "carID": 9, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2024-10-14T19:59", "end": "2024-08-08T16:21"}, "status": "A"}
+{"reservationID": 46, "clientID": 5, "carID": 9, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-10-19T16:58", "end": "2024-08-09T13:49"}, "status": "A"}
+{"reservationID": 47, "clientID": 5, "carID": 9, "additionalRequests": "dodatkowy kierowca", "reservationDate": {"start": "2024-10-13T11:44", "end": "2024-09-24T16:34"}, "status": "C"}
+{"reservationID": 48, "clientID": 7, "carID": 9, "additionalRequests": "dodatkowy kierowca", "reservationDate": {"start": "2024-10-15T13:53", "end": "2024-11-29T11:19"}, "status": "A"}
+{"reservationID": 49, "clientID": 8, "carID": 9, "additionalRequests": "fotelik", "reservationDate": {"start": "2025-01-06T19:48", "end": "2025-02-01T06:15"}, "status": "A"}
+{"reservationID": 50, "clientID": 27, "carID": 10, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-09-14T10:58", "end": "2024-10-16T07:04"}, "status": "A"}
+{"reservationID": 51, "clientID": 17, "carID": 10, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-12-21T02:37", "end": "2024-11-16T11:04"}, "status": "A"}
+{"reservationID": 52, "clientID": 40, "carID": 10, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-11-29T09:32", "end": "2025-01-19T16:38"}, "status": "C"}
+{"reservationID": 53, "clientID": 36, "carID": 10, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2025-02-02T06:48", "end": "2025-04-09T01:35"}, "status": "A"}
+{"reservationID": 54, "clientID": 2, "carID": 10, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2025-06-29T22:47", "end": "2025-05-14T05:34"}, "status": "A"}
+{"reservationID": 55, "clientID": 0, "carID": 11, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2024-09-19T19:22", "end": "2024-07-17T02:15"}, "status": "A"}
+{"reservationID": 56, "clientID": 11, "carID": 11, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2024-09-27T23:23", "end": "2024-07-19T02:14"}, "status": "C"}
+{"reservationID": 57, "clientID": 22, "carID": 11, "additionalRequests": "", "reservationDate": {"start": "2024-09-25T16:42", "end": "2024-08-01T17:23"}, "status": "A"}
+{"reservationID": 58, "clientID": 42, "carID": 11, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2024-09-14T16:54", "end": "2024-08-19T05:36"}, "status": "A"}
+{"reservationID": 59, "clientID": 13, "carID": 11, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2024-10-19T08:43", "end": "2024-10-22T14:45"}, "status": "A"}
+{"reservationID": 60, "clientID": 3, "carID": 12, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-07-11T01:10", "end": "2024-09-07T23:13"}, "status": "A"}
+{"reservationID": 61, "clientID": 34, "carID": 12, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-10-28T06:55", "end": "2024-11-23T19:06"}, "status": "A"}
+{"reservationID": 62, "clientID": 31, "carID": 12, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-11-25T22:14", "end": "2024-12-30T23:10"}, "status": "C"}
+{"reservationID": 63, "clientID": 17, "carID": 12, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2025-02-13T00:12", "end": "2025-02-02T22:42"}, "status": "A"}
+{"reservationID": 64, "clientID": 38, "carID": 12, "additionalRequests": "GPS", "reservationDate": {"start": "2025-03-14T07:43", "end": "2025-02-02T23:25"}, "status": "A"}
+{"reservationID": 65, "clientID": 0, "carID": 13, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2024-08-17T20:49", "end": "2024-07-18T03:53"}, "status": "A"}
+{"reservationID": 66, "clientID": 4, "carID": 13, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-10-06T07:22", "end": "2024-10-02T22:06"}, "status": "A"}
+{"reservationID": 67, "clientID": 46, "carID": 13, "additionalRequests": "wyj\u0105tkowy system bezpiecze\u0144stwa", "reservationDate": {"start": "2024-11-11T08:43", "end": "2024-12-11T05:05"}, "status": "A"}
+{"reservationID": 68, "clientID": 48, "carID": 13, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2025-02-28T20:01", "end": "2024-12-12T07:01"}, "status": "A"}
+{"reservationID": 69, "clientID": 15, "carID": 13, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-12-18T01:04", "end": "2024-12-25T04:39"}, "status": "A"}
+{"reservationID": 70, "clientID": 16, "carID": 14, "additionalRequests": "system automatycznego hamowania", "reservationDate": {"start": "2024-09-02T23:17", "end": "2024-09-03T08:26"}, "status": "A"}
+{"reservationID": 71, "clientID": 32, "carID": 14, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-10-10T23:58", "end": "2024-10-07T13:50"}, "status": "A"}
+{"reservationID": 72, "clientID": 40, "carID": 14, "additionalRequests": "GPS", "reservationDate": {"start": "2024-10-24T05:25", "end": "2024-11-12T18:39"}, "status": "A"}
+{"reservationID": 73, "clientID": 50, "carID": 14, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-12-16T10:09", "end": "2024-11-22T12:34"}, "status": "A"}
+{"reservationID": 74, "clientID": 29, "carID": 14, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2025-01-29T10:33", "end": "2025-01-06T16:44"}, "status": "A"}
+{"reservationID": 75, "clientID": 24, "carID": 15, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-08-19T20:17", "end": "2024-07-30T14:04"}, "status": "A"}
+{"reservationID": 76, "clientID": 22, "carID": 15, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2024-08-18T14:39", "end": "2024-08-02T14:52"}, "status": "A"}
+{"reservationID": 77, "clientID": 35, "carID": 15, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-10-10T23:54", "end": "2024-10-09T15:50"}, "status": "A"}
+{"reservationID": 78, "clientID": 20, "carID": 15, "additionalRequests": "dodatkowy kierowca", "reservationDate": {"start": "2024-11-29T16:32", "end": "2024-11-21T21:02"}, "status": "A"}
+{"reservationID": 79, "clientID": 10, "carID": 15, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2024-12-06T12:42", "end": "2025-01-05T23:27"}, "status": "A"}
+{"reservationID": 80, "clientID": 27, "carID": 16, "additionalRequests": "GPS", "reservationDate": {"start": "2024-08-25T12:49", "end": "2024-10-09T19:26"}, "status": "A"}
+{"reservationID": 81, "clientID": 45, "carID": 16, "additionalRequests": "GPS", "reservationDate": {"start": "2024-11-13T19:03", "end": "2024-10-28T20:56"}, "status": "A"}
+{"reservationID": 82, "clientID": 8, "carID": 16, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-11-15T13:56", "end": "2024-10-30T23:08"}, "status": "A"}
+{"reservationID": 83, "clientID": 32, "carID": 16, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2024-11-11T16:45", "end": "2024-12-20T22:58"}, "status": "A"}
+{"reservationID": 84, "clientID": 1, "carID": 16, "additionalRequests": "system nawigacji satelitarnej", "reservationDate": {"start": "2025-03-06T11:58", "end": "2025-02-05T03:30"}, "status": "A"}
+{"reservationID": 85, "clientID": 2, "carID": 17, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-08-06T11:24", "end": "2024-08-17T02:13"}, "status": "C"}
+{"reservationID": 86, "clientID": 37, "carID": 17, "additionalRequests": "wyj\u0105tkowy system bezpiecze\u0144stwa", "reservationDate": {"start": "2024-08-26T23:39", "end": "2024-10-04T03:57"}, "status": "A"}
+{"reservationID": 87, "clientID": 4, "carID": 17, "additionalRequests": "dodatkowy baga\u017cnik na dachu", "reservationDate": {"start": "2024-12-20T10:06", "end": "2024-12-10T23:02"}, "status": "A"}
+{"reservationID": 88, "clientID": 0, "carID": 17, "additionalRequests": "system monitorowania martwego pola", "reservationDate": {"start": "2024-12-12T23:59", "end": "2024-12-12T08:53"}, "status": "A"}
+{"reservationID": 89, "clientID": 32, "carID": 17, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2024-12-24T04:55", "end": "2025-01-19T10:49"}, "status": "A"}
+{"reservationID": 90, "clientID": 37, "carID": 18, "additionalRequests": "klimatyzacja dwustrefowa", "reservationDate": {"start": "2024-08-15T22:46", "end": "2024-10-17T02:40"}, "status": "C"}
+{"reservationID": 91, "clientID": 4, "carID": 18, "additionalRequests": "wyj\u0105tkowy system bezpiecze\u0144stwa", "reservationDate": {"start": "2024-10-22T05:46", "end": "2025-01-01T14:13"}, "status": "C"}
+{"reservationID": 92, "clientID": 6, "carID": 18, "additionalRequests": "wyj\u0105tkowy system bezpiecze\u0144stwa", "reservationDate": {"start": "2025-01-02T23:23", "end": "2025-02-06T20:53"}, "status": "A"}
+{"reservationID": 93, "clientID": 21, "carID": 18, "additionalRequests": "dodatkowe zabezpieczenia antykradzie\u017cowe", "reservationDate": {"start": "2025-02-08T13:53", "end": "2025-02-26T19:41"}, "status": "A"}
+{"reservationID": 94, "clientID": 40, "carID": 18, "additionalRequests": "dodatkowy system oszcz\u0119dzania paliwa", "reservationDate": {"start": "2025-03-07T22:56", "end": "2025-03-09T13:55"}, "status": "A"}
+{"reservationID": 95, "clientID": 46, "carID": 19, "additionalRequests": "fotelik", "reservationDate": {"start": "2024-07-19T22:00", "end": "2024-09-03T08:16"}, "status": "A"}
+{"reservationID": 96, "clientID": 0, "carID": 19, "additionalRequests": "system automatycznego parkowania", "reservationDate": {"start": "2024-11-05T00:55", "end": "2024-10-11T06:16"}, "status": "A"}
+{"reservationID": 97, "clientID": 0, "carID": 19, "additionalRequests": "podgrzewane fotele", "reservationDate": {"start": "2024-11-19T03:23", "end": "2024-11-24T22:49"}, "status": "A"}
+{"reservationID": 98, "clientID": 39, "carID": 19, "additionalRequests": "dodatkowe ubezpieczenie", "reservationDate": {"start": "2025-02-07T21:28", "end": "2024-12-14T17:09"}, "status": "A"}
+{"reservationID": 99, "clientID": 1, "carID": 19, "additionalRequests": "system automatycznego hamowania", "reservationDate": {"start": "2025-02-26T17:53", "end": "2024-12-16T05:33"}, "status": "A"}

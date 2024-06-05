@@ -1,0 +1,11 @@
+{
+    "reservationID": 1,
+    "clientID": 1,
+    "carID": 1,
+    "additionalRequests": "fotelik/GPS/inne usługi",
+    "reservationDate": {
+        "start": "YYYY-MM-DDThh:mm standardowy format czasu JS'a",
+        "end": "YYYY-MM-DDThh:mm"
+    },
+    "status": "A/C/F"
+}
