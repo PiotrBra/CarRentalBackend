@@ -14,7 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Hire {
     @Id
     private String _id;
-    private int hireID;
     private int clientID;
     private Date rentDate;
     private int price;

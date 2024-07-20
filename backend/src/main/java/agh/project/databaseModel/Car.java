@@ -15,8 +15,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Car {
     @Id
     private String _id;
-    @NonNull
-    private Integer carID;
     private String brand;
     private String model;
     private int year;

@@ -1,5 +1,4 @@
 {
-    "hireID": 1,
     "clientID": 1,
     "rentDate": {
         "start": "YYYY-MM-DDThh:mm standardowy format czasu JS'a",
