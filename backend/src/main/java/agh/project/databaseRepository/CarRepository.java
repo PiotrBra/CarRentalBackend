@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CarRepository extends MongoRepository<Car,String> {
-    Optional<Car> findByCarID(int carID);
+    Optional<Car> findBy_id(String _id);
     List<Car> findByBrand(String brand);
 
     @Query("{ 'pricePerDay' : { $lt: ?0 } }")

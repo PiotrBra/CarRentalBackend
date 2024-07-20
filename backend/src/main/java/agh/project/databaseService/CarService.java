@@ -16,8 +16,8 @@ public class CarService {
     public List<Car> findAll(){
         return carRepository.findAll();
     }
-    public Car findByID(int id){
-        Optional<Car> optionalCar = carRepository.findByCarID(id);
+    public Car findByID(String _id){
+        Optional<Car> optionalCar = carRepository.findBy_id(_id);
         if (optionalCar.isEmpty()){
             throw new RuntimeException("Car not exist");
         }

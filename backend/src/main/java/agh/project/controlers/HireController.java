@@ -28,12 +28,12 @@ public class HireController {
     }
 
     @GetMapping("carID/{carID}")
-    public List<Hire> getAllByCar(@PathVariable int carID){
+    public List<Hire> getAllByCar(@PathVariable String carID){
         return hireService.findAllByCarID(carID);
     }
 
     @GetMapping("clientID/{clientID}")
-    public List<Hire> getAllByClient(@PathVariable int clientID){
+    public List<Hire> getAllByClient(@PathVariable String clientID){
         return hireService.findAllByClientID(clientID);
     }
 
@@ -63,13 +63,13 @@ public class HireController {
 
     //Update
     @PutMapping("/{hireID}")
-    public Hire updateHireInfo(@PathVariable int hireID, @RequestBody Hire hire){
+    public Hire updateHireInfo(@PathVariable String hireID, @RequestBody Hire hire){
         return hireService.updateHireInfo(hireID, hire);
     }
 
     //Delete
     @DeleteMapping("/{hireID}")
-    public void deleteOpinion(@PathVariable int hireID){
+    public void deleteOpinion(@PathVariable String hireID){
         hireService.deleteOpinion(hireID);
     }
 

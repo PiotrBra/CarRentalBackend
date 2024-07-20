@@ -27,15 +27,13 @@ public class HireService {
     @Autowired
     private ReservationRepository reservationRepository;
 
-    @Autowired
-    private IdMakerService idMakerService;
     public List<Hire> findAll(){
         return hireRepository.findAll();
     }
-    public List<Hire> findAllByClientID(int clientID){
+    public List<Hire> findAllByClientID(String clientID){
         return hireRepository.findAllByClientID(clientID);
     }
-    public List<Hire> findAllByCarID(int carID){
+    public List<Hire> findAllByCarID(String carID){
         return hireRepository.findAllByCarID(carID);
     }
     public List<Hire> findAllByPriceLessThan(double price){
@@ -54,15 +52,14 @@ public class HireService {
     public Hire addHire(Hire hire){
         String result = checkAvailabiltiy(hire);
         if (result.isEmpty()){
-            hire.setHireID(idMakerService.getAndIncrementHireId());
             hire.setStatus("A");
             return hireRepository.insert(hire);
         }
         throw new RuntimeException("Couldn't insert hire because of: " + result);
     }
 
-    public Hire updateHireInfo(int hireID, Hire updatedHire){
-        Optional<Hire> optionalHire = hireRepository.findByHireID(hireID);
+    public Hire updateHireInfo(String hireID, Hire updatedHire){
+        Optional<Hire> optionalHire = hireRepository.findBy_id(hireID);
         if (optionalHire.isEmpty()){
             throw new RuntimeException("There is no specified hire");
         }
@@ -81,10 +78,10 @@ public class HireService {
     }
 
     private String checkAvailabiltiy(Hire hire){
-        if (userRepository.findByClientID(hire.getClientID()).isEmpty()){
+        if (userRepository.findBy_id(hire.getClientID()).isEmpty()){
             return "Client not exists";
         }
-        if (carRepository.findByCarID(hire.getCarID()).isEmpty()){
+        if (carRepository.findBy_id(hire.getCarID()).isEmpty()){
             return "Car not exists";
         }
         List<Reservation> reservations = reservationRepository.findAllByCarID(hire.getCarID());
@@ -108,8 +105,8 @@ public class HireService {
         return "";
     }
 
-    public void deleteOpinion(int hireID) {
-        Optional<Hire> optionalHire = hireRepository.findByHireID(hireID);
+    public void deleteOpinion(String _id) {
+        Optional<Hire> optionalHire = hireRepository.findBy_id(_id);
         if (optionalHire.isEmpty()){
             throw new RuntimeException("There is no specified hire");
         }

@@ -20,15 +20,13 @@ public class ReservationService {
     @Autowired
     private CarRepository carRepository;
 
-    @Autowired
-    private IdMakerService idMakerService;
 
     public List<Reservation> findAll() {
         return reservationRepository.findAll();
     }
 
-    public Reservation findByReservationID(int reservationID){
-        Optional<Reservation> optionalReservation = reservationRepository.findByReservationID(reservationID);
+    public Reservation findByReservationID(String id){
+        Optional<Reservation> optionalReservation = reservationRepository.findBy_id(id);
         if (optionalReservation.isPresent()) {
             return optionalReservation.get();
         }else {
@@ -36,10 +34,10 @@ public class ReservationService {
         }
     }
 
-    public List<Reservation> findAllByClientID(int clientID){
+    public List<Reservation> findAllByClientID(String clientID){
         return reservationRepository.findAllByClientID(clientID);
     }
-    public List<Reservation> findAllByCarID(int carID){
+    public List<Reservation> findAllByCarID(String carID){
         return reservationRepository.findAllByCarID(carID);
     }
     public List<Reservation> findAllByReservationDateBetween(String start, String end){
@@ -49,11 +47,11 @@ public class ReservationService {
         return reservationRepository.save(reservation);
     }
 
-    public void deleteByReservationId(int reservationID) {
-        reservationRepository.deleteByReservationID(reservationID);
+    public void deleteByReservationId(String reservationID) {
+        reservationRepository.deleteBy_id(reservationID);
     }
 
-    public Reservation cancelReservation(int reservationID){
+    public Reservation cancelReservation(String reservationID){
         Reservation reservation = findByReservationID(reservationID);
         reservation.setStatus("C");
         reservationRepository.save(reservation);
@@ -62,7 +60,6 @@ public class ReservationService {
 
     public Reservation addReservation(Reservation reservation){
         if (checkAvailabiltiy(reservation.getCarID(),reservation.getReservationDate())){
-            reservation.setReservationID(idMakerService.getAndIncrementReservationId());
             reservation.setStatus("A");
             return save(reservation);
         }else{
@@ -72,7 +69,7 @@ public class ReservationService {
     }
 
     public Reservation updateReservation( Reservation newReservation){
-        Reservation currentReservation = findByReservationID(newReservation.getReservationID());
+        Reservation currentReservation = findByReservationID(newReservation.get_id());
         if (checkAvailabiltiy(newReservation.getCarID(), newReservation.getReservationDate())){
             currentReservation.setReservationDate(newReservation.getReservationDate());
             currentReservation.setClientID(newReservation.getClientID());
@@ -85,13 +82,13 @@ public class ReservationService {
         }
     }
 
-    private boolean checkAvailabiltiy(int carID, Date date){
+    private boolean checkAvailabiltiy(String carID, Date date){
         return reservationRepository.
                 findByReservationDateBetweenAndCarID(date.getStart().toString(), date.getEnd().toString(),carID)
                 .isEmpty()
                 &&
                 Period.between(date.getStart().toLocalDate(),date.getEnd().toLocalDate()).toTotalMonths() < 3
                 &&
-                carRepository.findByCarID(carID).isPresent();
+                carRepository.findBy_id(carID).isPresent();
     }
 }

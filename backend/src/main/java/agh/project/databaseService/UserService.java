@@ -18,8 +18,6 @@ public class UserService {
     private ReservationService reservationService;
     @Autowired
     private HireService hireService;
-    @Autowired
-    private IdMakerService idMakerService;
 
     public List<User> findAll() {
         return userRepository.findAll();
@@ -29,8 +27,8 @@ public class UserService {
         return userRepository.save(client);
     }
 
-    public User findByClientID(int clientID){
-        Optional<User> existingUserOptional = userRepository.findByClientID(clientID);
+    public User findByClientID(String clientID){
+        Optional<User> existingUserOptional = userRepository.findBy_id(clientID);
         if (existingUserOptional.isPresent()){
             return existingUserOptional.get();
         } else {
@@ -74,14 +72,13 @@ public class UserService {
         if (findByEmail(user.getEmail()).isPresent()){
             throw new RuntimeException("User with specified email already exists");
         }else{
-            user.setClientID(idMakerService.getAndIncrementUserId());
             user.setEmployee(false);
             user.setStatus("A");
             return save(user);
         }
     }
 
-    public void deleteByClientID(int clientID) {
+    public void deleteByClientID(String clientID) {
         List<Reservation> reservations = reservationService.findAllByClientID(clientID);
         for (Reservation reservation :  reservations){
             if (reservation.getReservationDate().getStart().isAfter(LocalDateTime.now())){
@@ -95,11 +92,11 @@ public class UserService {
                 throw new RuntimeException("You can't delete your account. First return the car you borrowed");
             }
         }
-        userRepository.deleteByClientID(clientID);
+        userRepository.deleteBy_id(clientID);
     }
 
-    public User updateUser(int clientID, User updatedUser) {
-        Optional<User> existingUserOptional = userRepository.findByClientID(clientID);
+    public User updateUser(String clientID, User updatedUser) {
+        Optional<User> existingUserOptional = userRepository.findBy_id(clientID);
         if (existingUserOptional.isPresent()) {
             User existingUser = existingUserOptional.get();
 

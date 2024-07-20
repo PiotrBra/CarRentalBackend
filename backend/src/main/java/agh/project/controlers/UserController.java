@@ -28,7 +28,7 @@ public class UserController {
     }
 
     @GetMapping("/{clientID}")
-    public User getClientById(@PathVariable int clientID) {
+    public User getClientById(@PathVariable String clientID) {
         return userService.findByClientID(clientID);
     }
 
@@ -76,14 +76,14 @@ public class UserController {
     /*Front info: when doing form to update it make it autofill other
        parameters so client can update just the ones he wants*/
     @PutMapping
-    public User updateUser(@RequestParam int clientID, @RequestBody User updatedUser) {
+    public User updateUser(@RequestParam String clientID, @RequestBody User updatedUser) {
         return userService.updateUser(clientID, updatedUser);
     }
 
     //Delete
     //delete by ID
     @DeleteMapping
-    public void deleteByClientID(@RequestParam int clientID) {
+    public void deleteByClientID(@RequestParam String clientID) {
         userService.deleteByClientID(clientID);
     }
 }

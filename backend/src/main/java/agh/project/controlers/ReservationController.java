@@ -28,15 +28,15 @@ public class ReservationController {
     }
 
     @GetMapping("/{reservationID}")
-    public Reservation getReservationById(@PathVariable int reservationID) {
+    public Reservation getReservationById(@PathVariable String reservationID) {
         return reservationService.findByReservationID(reservationID);
     }
     @GetMapping("/clientID/{clientID}")
-    public List<Reservation> getAllClientsReservation(@PathVariable int clientID){
+    public List<Reservation> getAllClientsReservation(@PathVariable String clientID){
         return reservationService.findAllByClientID(clientID);
     }
     @GetMapping("/carID/{carID}")
-    public List<Reservation> getAllCarsReservation(@PathVariable int carID){
+    public List<Reservation> getAllCarsReservation(@PathVariable String carID){
         return reservationService.findAllByCarID(carID);
     }
 
@@ -54,12 +54,12 @@ public class ReservationController {
         return reservationService.updateReservation(reservation);
     }
     @PutMapping("/cancel/{reservationID}")
-    public Reservation cancelReservation(@PathVariable int reservationID){
+    public Reservation cancelReservation(@PathVariable String reservationID){
         return reservationService.cancelReservation(reservationID);
     }
 
     @DeleteMapping
-    public void deleteReservation(@RequestParam int reservationID) {
+    public void deleteReservation(@RequestParam String reservationID) {
         reservationService.deleteByReservationId(reservationID);
     }
 

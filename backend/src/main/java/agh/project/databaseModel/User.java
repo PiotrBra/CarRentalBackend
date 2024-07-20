@@ -31,18 +31,4 @@ public class User {
         this.password = password;
         this.driverslicence = driverslicence;
     }
-
-    public User(String firstname,
-                String lastname, int phone, String email,
-                String password, String driversLicence, String status,
-                boolean isEmployee) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.phone = phone;
-        this.email = email;
-        this.password = password;
-        this.driverslicence = driversLicence;
-        this.status = status;
-        this.isEmployee = isEmployee;
-    }
 }

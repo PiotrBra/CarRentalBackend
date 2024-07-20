@@ -19,16 +19,14 @@ public class OpinionService {
     @Autowired
     private HireRepository hireRepository;
 
-    @Autowired
-    private IdMakerService idMakerService;
 
     public List<Opinion> findAll(){
         return opinionsRepository.findAll();
     }
-    public List<Opinion> findAllByCarID(int carID){
+    public List<Opinion> findAllByCarID(String carID){
         return opinionsRepository.findAllByCarID(carID);
     }
-    public List<Opinion> findAllByClientID(int clientID){
+    public List<Opinion> findAllByClientID(String clientID){
         return opinionsRepository.findAllByClientID(clientID);
     }
 
@@ -40,7 +38,6 @@ public class OpinionService {
         List<Hire> hires = hireRepository.findAllByClientID(opinion.getClientID());
         for (Hire hire: hires){
             if (hire.getCarID() == opinion.getCarID()){
-                opinion.setOpinionID(idMakerService.getAndIncrementOpinionId());
                 return save(opinion);
             }
         }
@@ -48,8 +45,8 @@ public class OpinionService {
     }
 
 
-    public Opinion updateOpinionDescription(int opinionID, String description) {
-        Optional<Opinion> optionalOpinion = opinionsRepository.findByOpinionID(opinionID);
+    public Opinion updateOpinionDescription(String opinionID, String description) {
+        Optional<Opinion> optionalOpinion = opinionsRepository.findBy_id(opinionID);
         if (optionalOpinion.isPresent()) {
             Opinion opinion = optionalOpinion.get();
             opinion.setDescription(description);
@@ -59,7 +56,7 @@ public class OpinionService {
         }
     }
 
-    public void deleteOpinion(int opinionID){
-        opinionsRepository.deleteByOpinionID(opinionID);
+    public void deleteOpinion(String opinionID){
+        opinionsRepository.deleteBy_id(opinionID);
     }
 }

@@ -27,24 +27,24 @@ public class OpinionController {
     }
 
     @GetMapping("carID/{carID}")
-    public List<Opinion> getAllByCar(@PathVariable int carID){
+    public List<Opinion> getAllByCar(@PathVariable String carID){
         return opinionService.findAllByCarID(carID);
     }
 
     @GetMapping("clientID/{clientID}")
-    public List<Opinion> getAllByClient(@PathVariable int clientID){
+    public List<Opinion> getAllByClient(@PathVariable String clientID){
         return opinionService.findAllByClientID(clientID);
     }
 
     //Update
     @PutMapping("/{opinionID}")
-    public Opinion updateOpinionDescription(@PathVariable int opinionID, @RequestBody String description){
+    public Opinion updateOpinionDescription(@PathVariable String opinionID, @RequestBody String description){
         return opinionService.updateOpinionDescription(opinionID, description);
     }
 
     //Delete
     @DeleteMapping("/{opinionID}")
-    public void deleteOpinion(@PathVariable int opinionID){
+    public void deleteOpinion(@PathVariable String opinionID){
         opinionService.deleteOpinion(opinionID);
     }
 }

@@ -3,7 +3,6 @@ package agh.project.controlers;
 
 import agh.project.databaseModel.Car;
 import agh.project.databaseService.CarService;
-import agh.project.databaseService.IdMakerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +24,7 @@ public class CarController {
     }
 
     @GetMapping("/{id}")
-    public Car getCarById(@PathVariable int id){
+    public Car getCarById(@PathVariable String id){
         return carService.findByID(id);
     }
     @GetMapping("/lessthan/{price}")

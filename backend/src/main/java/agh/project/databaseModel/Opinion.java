@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Opinion {
     @Id
     private String _id;
-    private int clientID;
-    private int carID;
+    private String clientID;
+    private String carID;
     private String description;
 }

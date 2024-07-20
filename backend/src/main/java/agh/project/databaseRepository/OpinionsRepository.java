@@ -8,11 +8,11 @@ import java.util.Optional;
 
 public interface OpinionsRepository extends MongoRepository<Opinion,String> {
 
-    List<Opinion> findAllByCarID(int carID);
-    List<Opinion> findAllByClientID(int clientID);
+    List<Opinion> findAllByCarID(String carID);
+    List<Opinion> findAllByClientID(String clientID);
 
-    Optional<Opinion> findByOpinionID(int opinionID);
+    Optional<Opinion> findBy_id(String _id);
 
-    void deleteByOpinionID(int opinionID);
+    void deleteBy_id(String opinionID);
 
 }

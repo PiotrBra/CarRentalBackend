@@ -13,8 +13,8 @@ public class Reservation {
 
     @Id
     private String _id;
-    private int clientID;
-    private int carID;
+    private String clientID;
+    private String carID;
     private Date reservationDate;
     private String status;
     private String additionalRequests;

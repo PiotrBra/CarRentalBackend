@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserRepository extends MongoRepository<User, String> {
-    Optional<User> findByClientID(int clientID);
+    Optional<User> findBy_id(String clientID);
     List<User> findByFirstname(String firstname);
     List<User> findByLastname(String lastname);
     Optional<User> findByPhone(int phone);
@@ -17,7 +17,7 @@ public interface UserRepository extends MongoRepository<User, String> {
 
     List<User> findAllByIsEmployee(boolean isEmployee);
 
-    void deleteByClientID(int clientID);
+    void deleteBy_id(String clientID);
 
     void deleteByEmail(String email);
 

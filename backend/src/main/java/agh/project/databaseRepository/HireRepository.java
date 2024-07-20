@@ -9,9 +9,9 @@ import java.util.Optional;
 
 public interface HireRepository extends MongoRepository<Hire,String> {
 
-    Optional<Hire> findByHireID(int hireID);
-    List<Hire> findAllByClientID(int clientID);
-    List<Hire> findAllByCarID(int carID);
+    Optional<Hire> findBy_id(String _id);
+    List<Hire> findAllByClientID(String clientID);
+    List<Hire> findAllByCarID(String carID);
     List<Hire> findAllByPriceLessThan(double price);
     List<Hire> findAllByPriceBetween(double lowerPrice, double upperPrice);
     @Query("{ 'reservationDate.start': { $lt: ?1 }, 'reservationDate.end': { $gt: ?0 } }")
