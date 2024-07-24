@@ -22,7 +22,7 @@ public class ReservationController {
     }
 
     //Read
-    @GetMapping
+    @GetMapping("/")
     public List<Reservation> getAllReservations() {
         return reservationService.findAll();
     }

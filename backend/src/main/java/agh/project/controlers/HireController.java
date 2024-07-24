@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/hire")
+@RequestMapping("/hires")
 public class HireController {
 
     @Autowired
@@ -22,7 +22,7 @@ public class HireController {
     }
 
     //Read
-    @GetMapping
+    @GetMapping("/")
     public List<Hire> getAllHires() {
         return hireService.findAll();
     }
