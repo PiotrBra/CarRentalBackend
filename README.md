@@ -3,7 +3,7 @@
 
 Celem tego projektu jest stworzenie integracji między 
 bazą danych (MongoDB) a serwisem backendowym (przy użyciu 
-frameworku Springframework)
+frameworku Spring Framework)
 
 ## 1. Model bazy danych
 
@@ -12,21 +12,21 @@ Jako model przyjeliśmy prosty pięco dokumentowy system:
 
 ```json
 {
-    "carID": 1,
-    "brand": "Polonez",
-    "model": "1.6",
-    "year": 2000,
+    "_id": 1,
+    "brand": "Mercedes Benz",
+    "model": "Klasa G AMG 63",
+    "year": 2021,
     "registration": "KR 12345",
     "pricePerDay": 1000000,
     "category": "economy/basic/premium",
-    "availability": "A/R/S",
-    "description": "panie takiego poloneza to by każdy",
+    "availability": "Available/Rented/Service",
+    "description": "świetne auto, świetna aplikacja, świetni programiści!",
     "ratings": {
         "bad": 0,
         "good": 0,
-        "excellent": 0
+        "excellent": 1000
     },
-    "deposit": 1000,
+    "deposit": 100000,
     "photo": "link"
 }
 ```
@@ -34,39 +34,38 @@ kolekcja `Cars` odpowiada za przetrzymywanie danych dotyczących
 samochodów dostępnych do wypożyczenia, znajdują się tam głównie
 parametry danego samochodu, ale też przydatne informacje takie
 jak cena za dzień, kaucja, oceny użytkowników tak jak i dostępność.
-Dostępność posiada kod `A/R/S`, który jest tłumaczony na:
+Dostępność posiada kod:
 
-- A - available
-- R - rented
-- S - (in) service
+- Available
+- Rented
+- Service
 
 ### Kolekcja Users:
 
 ```json
 {
-    "clientID": 1,
-    "firstname": "Janusz",
-    "lastname": "Kowalski",
-    "phone": "+48 123451674",
-    "email": "janusz.kowal523@poczta.onet",
-    "password": "Nie ma hashowania ze względu na rozmiar projektu",
+    "_id": 1,
+    "firstname": "Piotr",
+    "lastname": "Branewski",
+    "phone": "+48 123456689",
+    "email": "piobrabusiness@gmail.com",
+    "password": "password",
     "driverslicence": "numerporzątkowy/rokwydania/symbole terytorialne GUS przykładowo: 00645/24/1221",
-    "status": "A/B",
+    "status": "Available/Blocked",
     "isEmployee": false
 }
 ```
 kolekcja `Users` odpowiada za przetrzymywanie informacji o klientach (lub pracownikach, za co odpowiada flaga `isEmployee`).
 Każda z danych jest generowana w sposób możliwie najbardziej realistyczny (o tym więcej w sekcji ``Generowanie danych``).
-Każdy z Klientów posiada także status:
-- A - available
-- B - blocked
-- O - occupied (już wypożycza samochód)
+Każdy z użytkowników posiada także status:
+- Available
+- Blocked
 
 ### Kolekcja Hires:
 
 ```json
 {
-    "hireID": 1,
+    "_id": 1,
     "clientID": 1,
     "rentDate": {
         "start": "YYYY-MM-DDThh:mm skrócone ISO 8601",
@@ -78,20 +77,21 @@ Każdy z Klientów posiada także status:
         "start": 10.21,
         "end": 8.21
     },
-    "status": "A/C"
+    "status": "Active/Canceled/Finished"
 }
 ```
 Kolekcja `Hires` odpowiada za informacje dotyczące wypożyczeń (tworząc przy okazji relacje między `Cars` i `Clients`).
 Znajdują się tu informacje dotyczące daty, paliwa i łacznej zapłaconej ceny (w przypadku praktycznym może się przydać
 do ewentualnych zwrotów). Pozstaje także informacja o statusie wypożyczenia:
-- A - active (jezeli czas zakończenia jest już wpisany, to znaczy, że wszystko zostało zakończone pomyślnie)
-- C - canceled
+- Active
+- Canceled
+- Finished
 
 ### Kolekcja Reservations:
 
 ```json
 {
-    "reservationID": 1,
+    "_id": 1,
     "clientID": 1,
     "carID": 1,
     "additionalRequests": "fotelik/GPS/inne usługi",
@@ -110,10 +110,10 @@ jak w przypadku ``Hires``.
 
 ```json
 {
-    "opinionID": 1,
+    "_id": 1,
     "clientID": 1,
     "carID": 1,
-    "description": "Fajne auto, szkoda tylko że tyle pali"
+    "description": "Super auto, super aplikacja :D"
 }
 ```
 Bardzo redundantna kolekcja w celach projektowych, ale została dodana w celu zademonstrowania elastyczności bazy mongo
@@ -155,49 +155,11 @@ Dodatkowo dzięki adnotacji `@Autowired` wiemy, że każde z repozytoriów jest 
 problemów związanych z potrzebą łączenia tabelek przy użyciu Aggregation Pipeline, co w sprawozdaniu okazało się problemem.
 Serwisy także odpowiadają za utrzymanie warunków integralności.
 
-Tutaj pojawia się jeden z większych problemów, które napotkaliśmy w trakcie realizowania tego projektu, a mianowicie
-utrzymywanie odpowiednich numerów ID. Dlatego stworzyliśmy dodatkowy Serwis ``IdMakerService`` odpowiadający tylko i 
-wyłącznie za wyznaczanie nowych ID i zapewnienie ich niepowtarzalności.
 
 ### Controllery
 Controllery odpowiadają za wywoływanie funkcji w serwisach i za operacje CRUD, które zostały adekwatnie poukładane w kodzie.
 
-## 4. Rozwiązywanie problemów
-
-Na przestrzeni projektu pojawiło się kilka problemów, które były związane z używaniem mongodb jako bazy danych.
-
-### Generacja indeksów
-Jako że większość naszych danych używa własnych indeksów, aby tworzyć relacje w bazie, pojawił się problem
-automatycznej indeksacji. W odróżnieniu od rozwiązań sqlowych nie jesteśmy w stanie rzucić autoincrement na PK, ale
-dalej chcemy gwarancji integralności danych. W tym miejscu przychodzi nam z pomocą wzorzec projektowy
-`Singleton`, dzięki któremu możemy trzymać informacje dotyczące każdego ID,
-a następnie używając rozwiązania Javowego — używając bloku synchronizowanego. Dzięki temu wiemy, że w danym momencie
-tylko 1 request może dostać własne ID.
-Przykładowo dla samochodów:
-```java
-    public synchronized Integer getAndIncrementCarId() {
-        this.carId += 1;
-        return carId;
-    }
-```
-
-### Konwersja danych
-Kolejnym problemem okazała się konwersja danych spowodowana elastycznością mongodb. Jako że nie wszystkie wypożyczenia
-muszą być zakończone (niektóre mogą być w trakcie), nastała potrzeba zaznaczenia tego. My przyjeliśmy, że struktura:
-```json
-{
-  "rentDate": {
-    "start": "YYYY-MM-DDThh:mm",
-    "end": ""
-  }
-}
-```
-`"end": ""` oznacza, że wypożyczenie nie zostało jeszcze zakończone. Niestety domyślny konwerter stringa na 
-biblioteczną klasę `LocaleDateTime` nie wiedział co zbytnio z tym zrobić, dlatego nastała potrzeba napisania własnej
-konwersji, która została napisana w `converters.StringToLocalDateTimeConverter` a następnie dodana do listy konwerterów
-w pliku konfiguracyjnym `MongoConfig`
-
-## 5. Testy
+## 4. Testy
 
 Ta sekcja została przeznaczona na testy poszczególnych operacji CRUD:
 
