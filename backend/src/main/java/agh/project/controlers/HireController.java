@@ -49,12 +49,6 @@ public class HireController {
         return hireService.findAllByPriceBetween(lowerPrice, upperPrice);
     }
 
-    @GetMapping("/time-between")
-    public List<Hire> findHiresByTimeRange(
-            @RequestParam("start") @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") String start,
-            @RequestParam("end") @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") String end){
-        return hireService.findAllByRentDateBetween(start, end);
-    }
 
     @GetMapping("/status")
     public List<Hire> findHiresByTimeRange(@RequestParam String status) {

@@ -16,7 +16,7 @@ public class Reservation {
     private String clientID;
     private String carID;
     private Date reservationDate;
-    private String status;
+    private String status; // A - active C - canceled
     private String additionalRequests;
 
 }

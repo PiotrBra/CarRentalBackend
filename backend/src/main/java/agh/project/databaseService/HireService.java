@@ -42,9 +42,6 @@ public class HireService {
     public List<Hire> findAllByPriceBetween(double lowerPrice, double upperPrice){
         return hireRepository.findAllByPriceBetween(lowerPrice,upperPrice);
     }
-    public List<Hire> findAllByRentDateBetween(String start, String end){
-        return hireRepository.findAllByRentDateBetween(start, end);
-    }
     public List<Hire> findAllByStatus(String status){
         return hireRepository.findAllByStatus(status);
     }
